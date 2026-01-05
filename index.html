@@ -15,22 +15,19 @@
 </head>
 
 <body>
-
-  <!-- HEADER -->
-  <header>
-    <h1>Mon site</h1>
-    <nav>
-      <a href="MainPage.html">Accueil</a>
-      <a href="Contact.html">Contact</a>
-    </nav>
-  </header>
-
   <!-- CONTENU PRINCIPAL -->
   <main>
-    <section>
-      <h2>Bienvenue</h2>
-      <p>
-     
+
+    
+    <div id="header"></div>
+
+<script>
+    fetch("templates/header.html").then(r => r.text()).then(f => {
+        document.getElementById("header").innerHTML = f;
+    });
+</script>
+
+
     <div class="bg-dark text-white px-5">
 
 
@@ -61,21 +58,31 @@
 
     
 
-<script src="../JS/videoTemplate.js" type="module"></script>
+<script src="JS/videoTemplate.js" type="module"></script>
 
 
 
 <div id="footer"></div>
 
 
-      </p>
-    </section>
-  </main>
 
-  <!-- FOOTER -->
-  <footer>
-    <p>© 2026 — Ton nom</p>
-  </footer>
+<script>
+    fetch("templates/presentation.html").then(r => r.text()).then(f => {
+        document.getElementById("Presentation").innerHTML = f;
+    });
+</script>
+
+
+
+
+<script>
+    fetch("../templates/footer.html").then(r => r.text()).then(f => {
+        document.getElementById("footer").innerHTML = f;
+    });
+</script>
+
+</section>
+  </main>
 
   <!-- JS -->
   <script src="js/script.js" defer></script>
