@@ -1,0 +1,61 @@
+<div id="header"></div>
+
+<script>
+    fetch("templates/header.html").then(r => r.text()).then(f => {
+        document.getElementById("header").innerHTML = f;
+    });
+</script>
+
+
+    <div class="bg-dark text-white px-5">
+
+
+        <div class="text-center">
+            <h1 class="py-5">Game projects</h1>
+        </div>
+
+        <div class="video-container mx-5%">
+            <div id="GameVideosContainer"
+                class="row row-cols-1 row-cols-md-1 row-cols-lg-2 justify-content-center g-5 text-white rounded-3">
+            </div>
+
+        </div>
+
+        <div class="text-center">
+            <h1 class = "py-5">SFX</h1>
+        </div>
+
+        <div class="video-container mx-5%">
+        <div id="SfxVideosContainer"
+            class="row row-cols-1 row-cols-md-1 row-cols-lg-2 justify-content-center g-5 text-white rounded-3">
+        </div>
+        </div>
+
+        <div id="Presentation"></div>
+
+    </div>
+
+    
+
+<script src="../JS/videoTemplate.js" type="module"></script>
+
+
+
+<div id="footer"></div>
+
+
+
+<script>
+    fetch("templates/presentation.html").then(r => r.text()).then(f => {
+        document.getElementById("Presentation").innerHTML = f;
+    });
+</script>
+
+
+
+
+<script>
+    fetch("../templates/footer.html").then(r => r.text()).then(f => {
+        document.getElementById("footer").innerHTML = f;
+    });
+</script>

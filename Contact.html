@@ -1,0 +1,23 @@
+<div id="header"></div>
+
+<script>
+    fetch("../templates/header.html").then(r => r.text()).then(f => {
+        document.getElementById("header").innerHTML = f;
+    });
+</script>
+
+
+    <div class="bg-dark text-white">
+        <h2 class="mx-5">Reach out</h2>
+        <p class="mx-5">Email: t.cartegnie@gmail.com</p>
+        <p class="my-0 mx-5">Linkedin:<a href="https://www.linkedin.com/in/th%C3%A9o-cartegnie/"> Théo Cartegnie </a></p>
+    </div>
+
+
+<div id="footer"></div>
+
+<script>
+    fetch("../templates/footer.html").then(r => r.text()).then(f => {
+        document.getElementById("footer").innerHTML = f;
+    });
+</script>
